@@ -1,0 +1,46 @@
+---
+title: "Irish Cities"
+author: "Richard Barry"
+date: "25 Jan 2017"
+output: html_document
+---
+
+### This page draws a map showing the major Irish cities and their population. 
+
+### Load Leaflet library
+```{r, warning=FALSE}
+library(leaflet)
+```
+
+### List of cities
+
+A list of the 10 largest Irish cities: (source geoname.org)
+```{r}
+cities <- data.frame(longitude = c(-6.249, -8.471, -6.136, -8.623, -9.049, -6.373, -7.112, -6.218, -6.348, -6.417),
+                     latitude = c(53.333, 51.898, 53.294, 52.665, 53.272, 53.286, 52.258, 53.46, 53.719, 54),
+                     pop = c(1024027, 190384, 185400, 90054, 70686, 64282, 47904, 36924, 33441, 33428))
+```
+
+### Make icon
+
+Use a green house as the icon:
+```{r}
+greenhouse <- makeIcon(iconUrl = "greenhouse.png",
+                 iconWidth = 26, iconHeight = 26,
+                 iconAnchorX = 2, iconAnchorY = 2)
+```
+
+## Create the map
+
+```{r, message=FALSE}
+map <- cities %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(icon = greenhouse,
+             clusterOptions = markerClusterOptions(),
+             popup = c("Dublin: 1,024,027", "Cork: 190,384", "Dun Laoghaire: 185,400", "Limerick: 90,054", "Galway 70,686", "Tallaght: 64,282", "Waterford: 47,904", "Swords: 36,924", "Drogheda: 33,441", "Dundalk: 33,428")
+                      ) %>%
+  addCircles(weight = 2, radius = sqrt(cities$pop) * 40)
+map
+```
+
