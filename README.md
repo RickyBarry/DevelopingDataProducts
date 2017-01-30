@@ -9,6 +9,10 @@ https://cdn.rawgit.com/RickyBarry/DevelopingDataProducts/5b7345b1/IrishCities.ht
 
 ### Week 3 Assignment
 Comparing the Irish Government Spend on Social Protection to the overall spend.
+You can view the resentation here:
+https://cdn.rawgit.com/RickyBarry/DevelopingDataProducts/fdc6b139/SocialWelfareSpending.html#1
+
+or here:
 
 http://rpubs.com/RickyB001/245828
 
