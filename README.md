@@ -1,5 +1,5 @@
 # DevelopingDataProducts
-##Code pages for Developing Data Products assignments 
+##Code pages for developing data products assignments 
 
 ### Week 2 Assignment
 A map of Irish Cities using the leaflet library in R.
