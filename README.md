@@ -8,4 +8,9 @@ You can view the Irish Cities html file using the following URL:
 https://cdn.rawgit.com/RickyBarry/DevelopingDataProducts/5b7345b1/IrishCities.html
 
 ### Week 3 Assignment
+Comparing the Irish Government Spend on Social Protection to the overall spend.
+
+http://rpubs.com/RickyB001/245828
+
+Use the left/right arrow keys to move through the presentation
 
