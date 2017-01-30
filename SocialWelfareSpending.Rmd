@@ -1,0 +1,54 @@
+---
+title: "Irish Government Spending on Social Protection"
+author: "Ricky Barry"
+date: "30/01/2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plotting Government spending on Social Protection compared to the overall budget.
+
+This presentation contains a plot of Irish Government Spending on Social Protection compared to the overall Government Spending.
+I am interested in showing a breakdown of the overall spending by the Irish government over time to see if there are areas where the Government spend less now than in the past. My hypothesis is that Social Protection spending has decreased as a percentage of the total budget.
+
+I would also like to check the Government spending on Interest loans over time as a % of the total budget in the future.
+
+## Government Spending on Social Protection
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+library(plotly)
+library(dplyr)
+# The data gathering is not a part of the assignment
+library(readr)
+GovernmentSpend <- read_csv("C:/Users/Ricky/Downloads/GovernmentSpend.csv")
+# head(GovernmentSpend)
+
+bud <- select(GovernmentSpend, AnnualGovtSpend, SocialProtectionSpend)
+bud <- bud[rowSums(is.na(bud))==0,]
+f <- list(
+  family = "Courier New, monospace",
+  size = 18,
+  color = "#7f7f7f"
+)
+x <- list(
+  title = "Annual Government Spending",
+  titlefont = f
+)
+y <- list(
+  title = "Government Spend on Social Protection",
+  titlefont = f
+)
+fit <- lm((bud$AnnualGovtSpend) ~ (bud$SocialProtectionSpend))
+p <- plot_ly(bud, x=(bud$AnnualGovtSpend)) %>%
+#    add_markers(y=(bud$SocialProtectionSpend), marker=list(color = 'rgba(0, 150, 200, .2)'),
+#                showLegend=FALSE) %>%
+    add_lines(y=predict(fit, log(bud)),
+            line = list(color = 'rgba(200,100,0,0.9)'),
+            name = "Linear regression", showlegend = FALSE) %>%
+    layout(xaxis=x, yaxis=y)
+p
+### Not what I was expecting. Back to the drawing board.
+```
