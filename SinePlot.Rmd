@@ -1,0 +1,25 @@
+---
+title: "Plotting a Sine wave"
+author: "Ricky Barry"
+date: "06/02/2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Observing the differences Amplitude, Period and Phase Shift have on a Sine plot.
+
+This presentation contains a Sine plot. You can observe the difference changing various variables has on the plot.
+
+## Sine Plot - The Amplitude
+The Amplitude is the height from the center line to the peak (or to the trough).
+<!-- insert diagram displaying Amplitude -->
+## Sine Plot - The Period
+The Period goes from one peak to the next (or from any point to the next matching point).
+<!-- insert diagram displaying Period -->
+
+## Sine Plot - The Phase Shift
+The Phase Shift is how far the function is horizontally to the right of the usual position.
+<!-- insert diagram displaying Phase Shift -->
