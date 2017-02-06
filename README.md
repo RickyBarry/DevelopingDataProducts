@@ -1,3 +1,4 @@
+
 # DevelopingDataProducts
 ##Code pages for developing data products assignments 
 
@@ -21,5 +22,6 @@ Use the left/right arrow keys to move through the presentation
 ### Week 4 Assignment
 Observing changes to a Sine wave plot presentation
 https://cdn.rawgit.com/RickyBarry/DevelopingDataProducts/59867e27/SinePlot.html#1
+
 Use the left/right arrow keys to move through the presentation
 
