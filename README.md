@@ -21,7 +21,10 @@ Use the left/right arrow keys to move through the presentation
 
 ### Week 4 Assignment
 Observing changes to a Sine wave plot presentation
-https://cdn.rawgit.com/RickyBarry/DevelopingDataProducts/59867e27/SinePlot.html#1
+
+http://rpubs.com/RickyB001/249115
+
+https://rickybarry.shinyapps.io/SinePlot/
 
 Use the left/right arrow keys to move through the presentation
 
